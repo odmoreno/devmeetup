@@ -1,6 +1,8 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
+    amd: true,
     node: true
   },
   'extends': [
@@ -10,7 +12,8 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-trailing-spaces': ['error', { "skipBlankLines": true }]
+    'no-trailing-spaces': ['error', { "skipBlankLines": true }],
+    'indent': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
@@ -26,3 +29,4 @@ module.exports = {
     }
   ]
 }
+
